@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>One Markov Chain Monte Carlo Fit for Many Plausible Values: A Calibrated Stacked Posterior Workflow for Bayesian Multilevel Models of Large-Scale Assessment Data</title>
+<style>
+:root { color-scheme: light dark; }
+body { max-width: 40rem; margin: 0 auto; padding: 4rem 1.5rem;
+       font: 1rem/1.65 Georgia, "Times New Roman", serif; color: #1b1b1b; background: #fff; }
+h1 { font-size: 1.45rem; line-height: 1.3; margin: 0 0 .6rem; font-weight: 600; }
+.byline { margin: 0 0 2rem; color: #555; font-size: .95rem; }
+h2 { font-size: .78rem; text-transform: uppercase; letter-spacing: .09em; color: #555;
+     margin: 0 0 .5rem; font-family: system-ui, sans-serif; font-weight: 600; }
+p.abstract { text-align: justify; margin: 0 0 2rem; }
+a.pdf { display: inline-block; padding: .65rem 1.3rem; background: #1b1b1b; color: #fff;
+        text-decoration: none; border-radius: 3px; font-family: system-ui, sans-serif; font-size: .95rem; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e0e0e0;
+         font-size: .85rem; color: #666; font-family: system-ui, sans-serif; }
+@media (prefers-color-scheme: dark) {
+  body { background: #141414; color: #e6e6e6; }
+  .byline, h2, footer { color: #a0a0a0; }
+  a.pdf { background: #e6e6e6; color: #141414; }
+  footer { border-color: #333; }
+}
+</style>
+</head>
+<body>
+
+<h1>One Markov Chain Monte Carlo Fit for Many Plausible Values: A Calibrated Stacked Posterior Workflow for Bayesian Multilevel Models of Large-Scale Assessment Data</h1>
+<p class="byline">JoonHo Lee, Matthew R. Williams, and Terrance D. Savitsky &middot; August 2026</p>
+
+<h2>Abstract</h2>
+<p class="abstract">Large-scale assessments such as the Programme for International Student Assessment
+(PISA) report each student&rsquo;s proficiency as multiple plausible values (PVs), latent traits published as
+draws from a marginal posterior distribution. The PVs, in turn, are analyzed by data users through fitting a
+secondary model once per PV and pooling the results with the combining rules of multiple imputation. For a
+Bayesian multilevel model, this convention requires one Markov chain Monte Carlo (MCMC) run per plausible
+value. We develop a workflow in which a single MCMC run suffices. All plausible values enter one stacked fit,
+and the reported estimate and total variance are assembled from deterministic per-PV fits. This paper
+formulates an exact affine correction and calibrates the fixed-effect posterior draws to the assembled target.
+A simulation across multiple conditions shows accurate estimation and near-nominal interval coverage. In an
+application to PISA 2022 reading data for the United States and Korea, the recommended workflow reproduces the
+per-PV estimates and standard errors. The open-source R package <em>pvstackr</em> implements the
+workflow.</p>
+
+<p><a class="pdf" href="lee-2026-stacked-posterior-workflow.pdf">Download PDF</a></p>
+
+<footer>Preprint &middot; not peer reviewed</footer>
+
+</body>
+</html>
