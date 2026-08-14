@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Cluster-Aware Uncertainty for Polytomous Mokken Scalability: A Calibrated Hierarchical Bayesian Bootstrap</title>
+<style>
+:root { color-scheme: light dark; }
+body { max-width: 40rem; margin: 0 auto; padding: 4rem 1.5rem;
+       font: 1rem/1.65 Georgia, "Times New Roman", serif; color: #1b1b1b; background: #fff; }
+h1 { font-size: 1.45rem; line-height: 1.3; margin: 0 0 .6rem; font-weight: 600; }
+.byline { margin: 0 0 2rem; color: #555; font-size: .95rem; }
+h2 { font-size: .78rem; text-transform: uppercase; letter-spacing: .09em; color: #555;
+     margin: 0 0 .5rem; font-family: system-ui, sans-serif; font-weight: 600; }
+p.abstract { text-align: justify; margin: 0 0 2rem; }
+a.pdf { display: inline-block; padding: .65rem 1.3rem; background: #1b1b1b; color: #fff;
+        text-decoration: none; border-radius: 3px; font-family: system-ui, sans-serif; font-size: .95rem; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e0e0e0;
+         font-size: .85rem; color: #666; font-family: system-ui, sans-serif; }
+@media (prefers-color-scheme: dark) {
+  body { background: #141414; color: #e6e6e6; }
+  .byline, h2, footer { color: #a0a0a0; }
+  a.pdf { background: #e6e6e6; color: #141414; }
+  footer { border-color: #333; }
+}
+</style>
+</head>
+<body>
+
+<h1>Cluster-Aware Uncertainty for Polytomous Mokken Scalability: A Calibrated Hierarchical Bayesian Bootstrap</h1>
+<p class="byline">JoonHo Lee &middot; The University of Alabama &middot; August 2026</p>
+
+<h2>Abstract</h2>
+<p class="abstract">Mokken scale analysis condenses whether a fixed set of items forms a scale into a
+single scalability coefficient, and much of the data it serves is collected in groups: pupils within
+classrooms, patients within clinics. Yet the coefficient&rsquo;s uncertainty is still routinely computed as if
+respondents were independent. Such intervals are shorter than the evidence allows and miss the true
+coefficient far more often than their label promises, while looking all the more precise; and once groups
+differ in size, &ldquo;the population coefficient&rdquo; is itself ambiguous, because the value for the
+average respondent and the value for the average group need not coincide. We develop confidence intervals for
+the polytomous scale coefficient that repair both problems. The two population versions are defined
+separately, and every interval is labeled by the one it estimates. Uncertainty comes from a hierarchical
+Bayesian bootstrap that reweights groups and respondents within groups, with the coefficient computed exactly
+under every reweighting; because the resulting interval overshoots its advertised coverage, it is tightened by
+a deterministic factor whose single constant was fixed on training conditions, validated on held-out
+conditions, and locked before the final evaluation existed. In a demanding confirmatory simulation the
+calibrated interval held its advertised coverage for both population targets at a fraction of the uncorrected
+width; applied without retuning, it delivers stable cluster-aware intervals for two scales of pupils&rsquo;
+school well-being. The procedure is implemented in the R package <em>bayesmokken</em>, and we suggest that a
+scalability claim from grouped data should routinely carry such an interval, labeled by its target.</p>
+
+<p><a class="pdf" href="lee-2026-clustered-polytomous-mokken.pdf">Download PDF</a></p>
+
+<footer>Preprint &middot; not peer reviewed</footer>
+
+</body>
+</html>
