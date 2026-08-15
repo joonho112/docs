@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Three-Layer Calibration for Bayesian Robust Variance Estimation in Meta-Analysis With Dependent Effect Sizes</title>
+<style>
+:root { color-scheme: light dark; }
+body { max-width: 40rem; margin: 0 auto; padding: 4rem 1.5rem;
+       font: 1rem/1.65 Georgia, "Times New Roman", serif; color: #1b1b1b; background: #fff; }
+h1 { font-size: 1.45rem; line-height: 1.3; margin: 0 0 .6rem; font-weight: 600; }
+.byline { margin: 0 0 2rem; color: #555; font-size: .95rem; }
+h2 { font-size: .78rem; text-transform: uppercase; letter-spacing: .09em; color: #555;
+     margin: 0 0 .5rem; font-family: system-ui, sans-serif; font-weight: 600; }
+p.abstract { text-align: justify; margin: 0 0 2rem; }
+a.pdf { display: inline-block; padding: .65rem 1.3rem; background: #1b1b1b; color: #fff;
+        text-decoration: none; border-radius: 3px; font-family: system-ui, sans-serif; font-size: .95rem; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e0e0e0;
+         font-size: .85rem; color: #666; font-family: system-ui, sans-serif; }
+@media (prefers-color-scheme: dark) {
+  body { background: #141414; color: #e6e6e6; }
+  .byline, h2, footer { color: #a0a0a0; }
+  a.pdf { background: #e6e6e6; color: #141414; }
+  footer { border-color: #333; }
+}
+</style>
+</head>
+<body>
+
+<h1>Three-Layer Calibration for Bayesian Robust Variance Estimation in Meta-Analysis With Dependent Effect Sizes</h1>
+<p class="byline">JoonHo Lee and Elizabeth Tipton &middot; August 2026</p>
+
+<h2>Abstract</h2>
+<p class="abstract">Meta-analyses in education, psychology, and medicine routinely extract several
+statistically dependent effect sizes from each study, and the within-study correlations needed to model that
+dependence are rarely reported. Frequentist practice resolves this through robust variance estimation:
+working models paired with cluster-robust standard errors, bias-reduced small-sample corrections, and
+Satterthwaite degrees of freedom. Bayesian meta-analysis offers complementary strengths (principled
+shrinkage, flexible priors on heterogeneity, and direct probability statements), but its posterior spread
+inherits whatever working dependence model the analyst assumes, and a Bayesian counterpart that calibrates
+this spread to the robust sandwich covariance has so far been lacking. This article introduces Three-Layer
+Calibration, a calibrated-Bayes procedure for Bayesian meta-regression with dependent effect sizes. Layer 1
+retains the posterior mean as the point estimate. Layer 2 applies a Cholesky Calibration Correction that
+affinely transforms posterior draws so their sample covariance matches a bias-reduced (CR2) cluster sandwich
+exactly in finite samples while preserving the posterior mean. Layer 3 replaces the normal reference
+distribution with per-coefficient Satterthwaite <em>t</em> distributions. In a 324-condition simulation built
+on a real meta-analysis, calibrated intervals attained 0.952 coverage for the average effect and uniform
+0.966&ndash;0.978 across slopes, which carry roughly one third the intercept&rsquo;s degrees of freedom. A
+normal-reference variant undercovered all three slopes (0.908&ndash;0.931); the frequentist benchmark
+undercovered only the smallest (0.905), where the largest gain occurs, at a documented power cost. A
+reanalysis of 1,198 effect sizes from 117 studies of brief alcohol interventions illustrates the workflow.
+Methods are implemented in the R package <em>bayesRVE</em>.</p>
+
+<p><a class="pdf" href="lee-2026-three-layer-calibration.pdf">Download PDF</a></p>
+
+<footer>Preprint &middot; not peer reviewed</footer>
+
+</body>
+</html>
