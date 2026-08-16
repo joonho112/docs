@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Public Code, Private Data: Lessons From an Open-Source Pipeline for Alabama&rsquo;s Confidential Pre-Kindergarten Records</title>
+<style>
+:root { color-scheme: light dark; }
+body { max-width: 40rem; margin: 0 auto; padding: 4rem 1.5rem;
+       font: 1rem/1.65 Georgia, "Times New Roman", serif; color: #1b1b1b; background: #fff; }
+h1 { font-size: 1.45rem; line-height: 1.3; margin: 0 0 .6rem; font-weight: 600; }
+.byline { margin: 0 0 2rem; color: #555; font-size: .95rem; }
+h2 { font-size: .78rem; text-transform: uppercase; letter-spacing: .09em; color: #555;
+     margin: 0 0 .5rem; font-family: system-ui, sans-serif; font-weight: 600; }
+p.abstract { text-align: justify; margin: 0 0 2rem; }
+a.pdf { display: inline-block; padding: .65rem 1.3rem; background: #1b1b1b; color: #fff;
+        text-decoration: none; border-radius: 3px; font-family: system-ui, sans-serif; font-size: .95rem; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e0e0e0;
+         font-size: .85rem; color: #666; font-family: system-ui, sans-serif; }
+@media (prefers-color-scheme: dark) {
+  body { background: #141414; color: #e6e6e6; }
+  .byline, h2, footer { color: #a0a0a0; }
+  a.pdf { background: #e6e6e6; color: #141414; }
+  footer { border-color: #333; }
+}
+</style>
+</head>
+<body>
+
+<h1>Public Code, Private Data: Lessons From an Open-Source Pipeline for Alabama&rsquo;s Confidential Pre-Kindergarten Records</h1>
+<p class="byline">JoonHo Lee, Alison Hooper, and Tammy Walker &middot; August 2026</p>
+
+<h2>Abstract</h2>
+<p class="abstract">State pre-kindergarten programs generate detailed administrative records, and those
+records inform evaluation and funding decisions. The processing that turns raw agency files into
+research-ready data receives far less attention: in many university&ndash;agency partnerships it consists of
+one analyst&rsquo;s private scripts, an arrangement that survives neither staff turnover nor routine changes
+to the agency&rsquo;s reporting formats. Drawing on five years of experience working with Alabama&rsquo;s
+First Class Pre-K administrative records, this article describes an open-source approach to processing
+confidential data that emerged from that experience. Working with the Alabama Department of Early Childhood
+Education, we moved the processing of confidential budget, classroom, and student records into
+<em>ALprekDB</em>, an open-source R package built on a simple rule (public code, private data): the cleaning
+rules, validation checks, tests, and documentation are all public, the records themselves never leave the
+secure environment, and synthetic data allow anyone to run the full pipeline without seeing a real record.
+Two events tested the design. The state&rsquo;s wholesale rebuild of its reporting formats was absorbed
+through mapping files that agency staff can read, with no changes to code. When a vendor delivery later
+arrived with contracted fields blank, the validation framework missed it; the fault-injection audit that
+followed detected eight of twelve seeded fault classes. We report the misses alongside the catches and draw
+practical lessons for agencies and research partners contemplating the same move.</p>
+
+<p><a class="pdf" href="lee-2026-public-code-private-data.pdf">Download PDF</a></p>
+
+<footer>Preprint &middot; not peer reviewed</footer>
+
+</body>
+</html>
