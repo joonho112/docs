@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>catchmentACS: Isochrone-Based Catchment-Area Profiles from American Community Survey Data with Margin-of-Error Propagation</title>
+<style>
+:root { color-scheme: light dark; }
+body { max-width: 40rem; margin: 0 auto; padding: 4rem 1.5rem;
+       font: 1rem/1.65 Georgia, "Times New Roman", serif; color: #1b1b1b; background: #fff; }
+h1 { font-size: 1.45rem; line-height: 1.3; margin: 0 0 .6rem; font-weight: 600; }
+.byline { margin: 0 0 2rem; color: #555; font-size: .95rem; }
+h2 { font-size: .78rem; text-transform: uppercase; letter-spacing: .09em; color: #555;
+     margin: 0 0 .5rem; font-family: system-ui, sans-serif; font-weight: 600; }
+p.abstract { text-align: justify; margin: 0 0 2rem; }
+a.pdf { display: inline-block; padding: .65rem 1.3rem; background: #1b1b1b; color: #fff;
+        text-decoration: none; border-radius: 3px; font-family: system-ui, sans-serif; font-size: .95rem; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e0e0e0;
+         font-size: .85rem; color: #666; font-family: system-ui, sans-serif; }
+@media (prefers-color-scheme: dark) {
+  body { background: #141414; color: #e6e6e6; }
+  .byline, h2, footer { color: #a0a0a0; }
+  a.pdf { background: #e6e6e6; color: #141414; }
+  footer { border-color: #333; }
+}
+</style>
+</head>
+<body>
+
+<h1><em>catchmentACS</em>: Isochrone-Based Catchment-Area Profiles from American Community Survey Data with Margin-of-Error Propagation</h1>
+<p class="byline">JoonHo Lee &middot; August 2026</p>
+
+<h2>Abstract</h2>
+<p class="abstract">Site-level analyses in education, public health, and planning often require a profile
+of the population living within a fixed travel time of each site on a list, such as the poverty rate around a
+proposed preschool classroom or the share of households receiving nutrition assistance near a clinic. In the
+United States such profiles are constructed from American Community Survey (ACS) tract estimates, which are
+published together with margins of error that are large at the tract scale. Existing R workflows delineate a
+drive-time isochrone around each site and interpolate tract values onto it, but the interpolation step
+returns point estimates only, so the published margins of error are discarded at the point where they are
+most needed. We describe the <em>catchmentACS</em> package, which assembles drive-time catchment profiles
+with margins of error carried through every stage, from the tract inputs to the derived rates, and with
+per-row provenance recording how each number was produced. The paper sets out the estimation framework,
+explains the design of the package, and works through single-site and multi-site illustrations, all of which
+can be reproduced without a Census API key or a routing account. A simulation study shows that the intervals
+the package reports are conservative, and that the site comparisons they support are not fragile to the
+independence assumption inherited from the Census Bureau approximation formulas. In an illustrative ranking
+of twenty catchments by poverty rate, about one in five pairwise comparisons could not be distinguished at
+the 90 percent level, which is information that interpolated point estimates cannot provide.</p>
+
+<p><a class="pdf" href="lee-2026-catchmentacs.pdf">Download PDF</a></p>
+
+<footer>Preprint &middot; not peer reviewed</footer>
+
+</body>
+</html>
