@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Do Facial-Affect Process Data Improve Cognitive Measurement? An Adversarial Out-of-Sample Benchmark</title>
+<style>
+:root { color-scheme: light dark; }
+body { max-width: 40rem; margin: 0 auto; padding: 4rem 1.5rem;
+       font: 1rem/1.65 Georgia, "Times New Roman", serif; color: #1b1b1b; background: #fff; }
+h1 { font-size: 1.45rem; line-height: 1.3; margin: 0 0 .6rem; font-weight: 600; }
+.byline { margin: 0 0 2rem; color: #555; font-size: .95rem; }
+h2 { font-size: .78rem; text-transform: uppercase; letter-spacing: .09em; color: #555;
+     margin: 0 0 .5rem; font-family: system-ui, sans-serif; font-weight: 600; }
+p.abstract { text-align: justify; margin: 0 0 2rem; }
+a.pdf { display: inline-block; padding: .65rem 1.3rem; background: #1b1b1b; color: #fff;
+        text-decoration: none; border-radius: 3px; font-family: system-ui, sans-serif; font-size: .95rem; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e0e0e0;
+         font-size: .85rem; color: #666; font-family: system-ui, sans-serif; }
+@media (prefers-color-scheme: dark) {
+  body { background: #141414; color: #e6e6e6; }
+  .byline, h2, footer { color: #a0a0a0; }
+  a.pdf { background: #e6e6e6; color: #141414; }
+  footer { border-color: #333; }
+}
+</style>
+</head>
+<body>
+
+<h1>Do Facial-Affect Process Data Improve Cognitive Measurement? An Adversarial Out-of-Sample Benchmark</h1>
+<p class="byline">JoonHo Lee and Yurou Wang &middot; August 2026</p>
+
+<h2>Abstract</h2>
+<p class="abstract">Cognitive assessments are increasingly taken in front of a camera, and commercial
+software converts the video into continuous scores labeled anxiety, attention, or joy. Offered to measurement
+as process data, these channels are said to tell an assessment something the answer record cannot. The claim
+is rarely tested in a form that could fail; we report such a test. The corpus is 169 college students taking a
+25-item reasoning assessment, some in person and most over Zoom. We asked whether the facial channels improve
+out-of-sample prediction of what an examinee does next: answer correctly, take longer, ask for help, or skip.
+Nearly all of the evaluation was fixed in advance: models were scored on unseen examinees,
+&ldquo;no gain&rdquo; was given a calibrated width by simulation, and any gain had to beat corrupted copies of
+the same signals. No facial representation earned a usable gain. Four of the six primary comparisons were
+precise nulls, any effect smaller than a stated floor; two were inconclusive at that boundary. Richer temporal
+and person-specific representations did worse. One within-person comparison did pass the original screening
+rule, but corrupted signals with no facial content matched its gain, so it supports no facial claim either. The
+machinery can find a signal when one exists: allowed to see the item it was predicting, it reported a large
+illusory gain. What the channels did track was the recording situation, predicting in-person versus Zoom
+sessions better than anything cognitive, though that contrast is unresolved at the person level. The benchmark
+is reusable for any proposed process-data channel.</p>
+
+<p><a class="pdf" href="lee-2026-facial-affect-benchmark.pdf">Download PDF</a></p>
+
+<footer>Preprint &middot; not peer reviewed</footer>
+
+</body>
+</html>
